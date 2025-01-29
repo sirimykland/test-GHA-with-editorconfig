@@ -3,11 +3,11 @@
  */
 
 public class ThisIsASampleClass extends C1 implements I1, I2, I3, I4, I5 {
-    private int f1 = 1;
+        private int f1 = 1;
     private String field2 = "";
 
-    public void foo1(int i1, int i2, int i3, int i4, int i5, int i6, int i7) {
-    }
+    public void foo1(int i1, int i2, int i3, int i4,
+                     int i5, int i6, int i7) {}
 
     public void fooNonEmptyBody() {
         int x = 1;
@@ -49,7 +49,8 @@ public class ThisIsASampleClass extends C1 implements I1, I2, I3, I4, I5 {
             default:
                 doDefault();
         }
-        try (MyResource r1 = getResource(); MyResource r2 = null) {
+        try (MyResource r1 = getResource();
+             MyResource r2 = null) {
             doSomething();} catch (Exception e) {
             processException(e);
         } finally {
@@ -58,9 +59,9 @@ public class ThisIsASampleClass extends C1 implements I1, I2, I3, I4, I5 {
         do {
             x--;
         } while (x > 10);
-        try (MyResource r1 = getResource();
-             MyResource r2 = null) {
-            doSomething();
+        try (MyResource r1= getResource( );
+             MyResource r2 =  null) {
+            doSomething( );
         }
         Runnable r = () -> {
         };
@@ -86,11 +87,12 @@ enum Breed {Dalmatian(), Labrador(), Dachshund()}
 @Annotation2
 
 
- @Annotation3(param1 = "value1", param2 = "value2") @Annotation4
+ @Annotation3(param1 = "value1",
+         param2 = "value2") @Annotation4
 class Foo {
     @Annotation1
     @Annotation3(param1 = "value1",  param2 = "value2")
-    public static void foo() {
+    public  static void foo() {
     }
 
 
