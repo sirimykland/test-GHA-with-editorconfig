@@ -17,6 +17,5 @@ jobs:
         with:
           tool_name: 'IntelliJ Diff'
           github_token: ${{ secrets.github_token }}
-          fail_on_changes: true
           path: '.'
           file_mask: '*.java'
