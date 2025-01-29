@@ -82,14 +82,12 @@ public class ThisIsASampleClass extends C1 implements I1, I2, I3, I4, I5 {
     }
 }
 
-enum Breed {
-    Dalmatian(), Labrador(), Dachshund()
-}
+enum Breed {Dalmatian(), Labrador(), Dachshund()}
 
 @Annotation1
 @Annotation2
-@Annotation3(param1 = "value1", param2 = "value2")
-@Annotation4
+
+ @Annotation3(param1 = "value1", param2 = "value2") @Annotation4
 class Foo {
     @Annotation1
     @Annotation3(param1 = "value1", param2 = "value2")
