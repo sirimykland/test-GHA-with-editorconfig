@@ -13,3 +13,6 @@ jobs:
       - uses: actions/checkout@v4
 
       - uses: joutvhu/intellij-format@v1
+        with:
+          verify: true
+          settings: .idea/codeStyles/Project.xml
