@@ -15,3 +15,5 @@ jobs:
           path: /home/runner/work/_temp/_github_workflow/idea-cache
           key: ${{ runner.os }}-idea-cache-v2
       - uses: notdevcody/intellij-format-action@v2
+        with:
+          style-settings-file: Project.xml
