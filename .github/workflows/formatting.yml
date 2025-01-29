@@ -7,12 +7,15 @@ on:
 jobs:
   reformat:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    name: IntelliJ
     steps:
-      - uses: actions/checkout@v4
-
-      - uses: joutvhu/intellij-format@v1
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Check IntelliJ Formatting
+        uses: sidhant92/intellij-format-action@v1
         with:
-          verify: true
-          settings: .idea/codeStyles/Project.xml
+          tool_name: 'IntelliJ Diff'
+          github_token: ${{ secrets.github_token }}
+          fail_on_changes: true
+          path: '.'
+          file_mask: '*.java'
